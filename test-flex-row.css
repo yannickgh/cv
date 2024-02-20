@@ -1,0 +1,22 @@
+body {
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid green;
+}
+
+.first {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}
+
+.second {
+    width: 100px;
+    height: 100px;
+    border: 1px solid blue;
+}

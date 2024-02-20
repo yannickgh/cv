@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Collapsible Timeline</title>
+    <link rel="stylesheet" href="./dupli.css">
+  </head>
+  <body>
+    <svg display="none">
+      <symbol id="arrow">
+        <polyline
+          points="7 10,12 15,17 10"
+          fill="none"
+          stroke="currentcolor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2" />
+      </symbol>
+    </svg>
+    <h1>A Brief History of Unix Time</h1>
+    <div id="timeline" class="timeline">
+      <div class="btn-group">
+        <button class="btn" type="button" data-action="expand">Expand All</button>
+        <button class="btn" type="button" data-action="collapse">Collapse All</button>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item1"
+            aria-labelledby="item1-name"
+            aria-expanded="false"
+            aria-controls="item1-ctrld"
+            aria-haspopup="true"
+            data-item="1">
+            <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item1-name" class="timeline__meta">
+            <time class="timeline__date" datetime="1970-01-01">Nov 2023 - Maintenant</time><br />
+            Horizon Associés, Rueil-Malmaison
+            <br>
+            <strong class="timeline__title">Associé au sein du pôle relation entreprise</strong>
+          </span>
+        </div>
+        <div class="timeline__item-body" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
+          <div class="timeline__item-body-content">
+            <p class="timeline__item-p">
+              Chargé du secteur industriel au pôle “relation entreprise” au sein du concept
+innovant des entreprises éphémères.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item2"
+            aria-labelledby="item2-name"
+            aria-expanded="false"
+            aria-controls="item2-ctrld"
+            aria-haspopup="true"
+            data-item="2">
+            <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item2-name" class="timeline__meta">
+            <time class="timeline__date" datetime="1973-10-17">Jan 2011 - Oct 2020</time><br />
+            Invivoo, Paris
+            <br>
+            <strong class="timeline__title">Ingénieur d'Etudes</strong>
+          </span>
+        </div>
+        <div class="timeline__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
+          <div class="timeline__item-body-content">
+            <p class="timeline__item-p">
+              Huit missions dans les grandes banques (BNP Paribas, Société Générale,
+Natixis BPCE et Crédit Agricole) en tant que consultant Java au sein d’équipes
+de développement logiciel pour l’ESN Invivoo.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__item-header">
+          <button
+            class="timeline__arrow"
+            type="button"
+            id="item3"
+            aria-labelledby="item3-name"
+            aria-expanded="false"
+            aria-controls="item3-ctrld"
+            aria-haspopup="true"
+            data-item="3">
+            <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+              <use href="#arrow" />
+            </svg>
+          </button>
+          <span class="timeline__dot"></span>
+          <span id="item3-name" class="timeline__meta">
+            <time class="timeline__date" datetime="2001-09-09">Jan 2008 - Déc 2010</time><br />
+            Abase, Paris<br>
+            <strong class="timeline__title">Ingénieur d'Etudes</strong>
+          </span>
+        </div>
+        <div class="timeline__item-body" id="item3-ctrld" role="region" aria-labelledby="item3" aria-hidden="true">
+          <div class="timeline__item-body-content">
+            <p class="timeline__item-p">
+              Une mission pendant plus de 2 ans à la Société Générale au sein d’
+une éuipqe
+de six personnes en tant que consultant Java pour l’ESN Abase.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./ct.js"></script>
+  </body>
+</html>

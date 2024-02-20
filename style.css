@@ -1,0 +1,290 @@
+@font-face {
+  font-family: "PoppinsB";
+  src: url("./assets/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PoppinsR";
+  src: url("./assets/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PoppinsI";
+  src: url("./assets/Poppins/Poppins-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  width: 21cm;
+  height: 29.7cm;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  background-color: black;
+}
+
+.page {
+  height: 29.7cm;
+  width: 21cm;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.left {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid black;;
+}
+
+.photo {
+  position: relative;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.photo .cache {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  clip-path: polygon(0 76%, 0% 100%, 100% 100%);
+  background-color: #efefef;
+  transform: translateY(1px);
+}
+
+.summary {
+  position: relative;
+  height: 100%;
+  background-color: #efefef;
+}
+
+.summary-overlay {
+    position: absolute;
+    background-color: transparent;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1cm;
+    top: -.8cm;
+    overflow: visible;
+    z-index: 3;
+}
+
+.left-block {
+  font-family: "PoppinsR";
+  margin-bottom: 1cm;
+}
+
+.left-block .item {
+  font-size: 0.8rem;
+}
+
+.left-block .item.space {
+  height: 0.3rem;
+}
+
+.left-block .with-icon {
+  display: flex;
+  align-items: center;
+}
+
+.left-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: .25cm;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  width: .9cm;
+}
+
+.icon-title svg {
+  width: 1.5rem;
+}
+
+.left-title .content {
+  font-size: 1.2rem;;
+  flex-grow: 1;
+  font-family: "PoppinsB";
+  text-transform: uppercase;
+}
+
+.flex-align-self-start {
+  align-self: flex-start;
+}
+
+.title-item {
+  font-family: "PoppinsB";
+  font-size: 0.8rem;
+}
+
+.left-block .two-items {
+  display: flex;
+}
+
+.left-block .two-items .i1 {
+  width: 1cm;
+}
+
+.left-block .two-items .i2 {
+  flex-grow: 1;
+}
+
+.summary-overlay .left-block:nth-child(3) svg,
+.summary-overlay .left-block:nth-child(4) svg {
+    width: 1.2rem;
+}
+
+.right {
+  margin-left: 1cm;
+  color: #404040;
+}
+
+.espace-haut {
+  margin-block: 2cm;
+}
+
+.nom {
+  font-family: "PoppinsB";
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.poste {
+  font-family: "PoppinsR";
+  font-size: 1.6rem;
+  margin-block: .5cm;
+  letter-spacing: 0.05em;
+}
+
+.espace-2 {
+  margin-block: 1cm;
+}
+
+.espace-3 {
+  margin-block: 0cm;
+}
+
+.right-titre {
+  margin-block: .25cm;
+  font-family: "PoppinsB";
+  font-size: 1.2rem;
+}
+
+.right-content {
+  font-family: "PoppinsR";
+  font-size: .8rem;
+  text-align: justify;
+  max-width: 11cm;
+}
+
+.espace-3 {
+  margin-block: .8cm;
+}
+
+.espace-4 {
+  margin-block: .8cm;
+}
+
+.timeline {
+  margin: auto;
+  padding: 0 1.5em;
+  width: 100%;
+  max-width: 36em;
+}
+
+.timeline__item {
+  position: relative;
+}
+
+.timeline__date {
+  font-size: .8rem;
+  line-height: 2rem;
+}
+
+.timeline__dot {
+  background-color: white;
+  border: 2px solid currentColor; 
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  margin-block-start: 0.5rem;
+  margin-inline-end: 1em;
+  position: relative;
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+.timeline__item {
+  font-family: "PoppinsR";
+  display: flex;
+}
+
+.timeline__item:not(:last-child):before {
+  background-color: currentColor;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1em;
+  left: .34rem;
+  width: 0.125rem;
+  height: 100%;
+}
+
+.timeline__item:last-child:before {
+  background-color: currentColor;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1em;
+  left: .34rem;
+  width: 0.125em;
+  height: 85%;
+}
+
+.timeline__item-body {
+  font-family: "PoppinsR";
+  font-size: .7em;
+  text-align: justify;
+  max-width: 9cm;
+}
+
+.timeline__title {
+  font-family: "PoppinsB";
+  font-size: .8em;
+}
+
+.timeline__entreprise {
+  font-size: .8rem;
+}
+
+.timeline__item-body--expanded {
+  height: auto;
+}
+
+.espace-5 {
+  margin-block-end: .25cm;
+}
+
+@print {
+  #b1
+}
+
